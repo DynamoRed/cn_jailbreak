@@ -159,7 +159,7 @@ function GM:CheckPlayState()
 	end
 end
 function GM:RoundThink(ct)
-	if self.PrepareTime >= ct then
+	if self.PrepareTime == nil or ct == nil or self.PrepareTime >= ct then
 		return
 	end
 	local round = self:GetRound()
